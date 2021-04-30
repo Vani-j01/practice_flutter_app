@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 //import this to implement flutterfire
 import 'package:firebase_core/firebase_core.dart';
-import 'package:practice_flutter_app/homepage.dart';
+import 'package:practice_flutter_app/screens/homepage.dart';
+import 'package:practice_flutter_app/widgetsandfunctions/dart/auth.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,8 +14,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+        builder: (context, child) {
+          return Scaffold(
+            appBar: AppBar(
+              title: Text("Flutter Demo"),
+            ),
+            body: child, //this child is dynamically replaced with corresponding page when we navigate
+          );
+        },
       theme: ThemeData(
-
       ),
       home: MyHomePage(),
     );
