@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:practice_flutter_app/screens/websockets.dart';
 
 import 'login.dart';
 
@@ -35,6 +36,14 @@ class _HomePageState extends State<HomePage> {
                     );
                   }
               ),
+              MaterialButton(
+                child: Text("Websockets"),
+                onPressed:() {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Websockets()),
+                  );
+                }),
               MaterialButton(
                   child: Text("Notification"),
               ),

@@ -37,6 +37,9 @@ dependencies:
   #add this for authentication
   firebase_auth: "^0.20.1"
   ######
+  #add this for websockets
+  web_socket_channel: ^2.0.0
+  ######
 
 dev_dependencies:
   flutter_test:
